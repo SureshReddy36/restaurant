@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice & Basil - Fine Italian Dining</title>
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Spice & Basil</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reservations">Reservations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div style="display: flex; align-items: center;">
+                <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+                <button class="cart-icon" onclick="toggleCart()">
+                    🛒 Cart
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+            <div class="nav-toggle" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Order</h2>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <h3>Total: $<span id="cart-total">0.00</span></h3>
+            <button class="checkout-btn" onclick="checkout()">Place Order</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Spice & Basil</h1>
+            <p>Authentic Italian Cuisine in the Heart of the City</p>
+            <a href="#menu" class="cta-button">View Our Menu</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Our Story</h3>
+                <p>Welcome to Spice & Basil, where authentic Italian flavors meet modern culinary artistry. Since 1985, we've been serving the finest Italian cuisine using traditional recipes passed down through generations.</p>
+                <p>Our head chef, Marco Rossi, brings over 20 years of experience from the kitchens of Rome and Milan. Every dish is crafted with passion, using only the freshest ingredients imported directly from Italy.</p>
+                <p>Whether you're joining us for an intimate dinner or a celebration with family and friends, Spice & Basil offers an unforgettable dining experience that captures the essence of Italy.</p>
+            </div>
+            <div class="about-image">
+                <img src="images/banner.jpg" alt="Chef Marco Rossi" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section">
+        <h2 class="section-title">Our Menu</h2>
+        <div class="menu-filters">
+            <button class="filter-btn active" onclick="filterMenu('all')">All</button>
+            <button class="filter-btn" onclick="filterMenu('appetizers')">Appetizers</button>
+            <button class="filter-btn" onclick="filterMenu('main-course')">Main Course</button>
+            <button class="filter-btn" onclick="filterMenu('desserts')">Desserts</button>
+            <button class="filter-btn" onclick="filterMenu('beverages')">Beverages</button>
+        </div>
+        <div class="menu-grid" id="menu-grid"></div>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section class="testimonials">
+        <div class="section">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-container">
+                <div class="testimonials-wrapper">
+                    <div class="testimonials-grid" id="testimonials-grid">
+                        <div class="testimonial">
+                            <img src="images/testimonials/Sarah_Johnson.jpg" alt="Sarah Johnson" loading="lazy">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p>"The best Italian food I've had outside of Italy! The pasta is absolutely divine and the service is impeccable."</p>
+                            <strong>- Sarah Johnson</strong>
+                        </div>
+                        <div class="testimonial">
+                            <img src="images/testimonials/Michael_Chen.jpg" alt="Michael Chen" loading="lazy">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p>"Spice & Basil never disappoints. The atmosphere is perfect for date nights and the tiramisu is to die for!"</p>
+                            <strong>- Michael Chen</strong>
+                        </div>
+                        <div class="testimonial">
+                            <img src="images/testimonials/Emma_Rodriguez.jpg" alt="Emma Rodriguez" loading="lazy">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p>"Outstanding food and wonderful staff. This place feels like a little piece of Italy right here in our city."</p>
+                            <strong>- Emma Rodriguez</strong>
+                        </div>
+                        <div class="testimonial">
+                            <img src="images/testimonials/David_Wilson.jpg" alt="David Wilson" loading="lazy">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p>"Amazing authentic Italian cuisine! The risotto is creamy perfection and the wine selection is excellent."</p>
+                            <strong>- David Wilson</strong>
+                        </div>
+                        <div class="testimonial">
+                            <img src="images/testimonials/Lisa_Brown.jpg" alt="Lisa Brown" loading="lazy">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p>"Romantic ambiance and incredible food. Perfect for special occasions. The osso buco was phenomenal!"</p>
+                            <strong>- Lisa Brown</strong>
+                        </div>
+                        <div class="testimonial">
+    <img src="images/testimonials/Sophia_Rao.jpg" alt="Sophia Rao" loading="lazy">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <p>"Authentic Italian flavors with an Indian twist! The pasta and pizza combo is heavenly."</p>
+    <strong>- Sophia Rao</strong>
+</div>
+<div class="testimonial">
+    <img src="images/testimonials/Rajesh_Kumar.jpg" alt="Rajesh Kumar" loading="lazy">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <p>"Excellent service and cozy interiors. A perfect spot for family dinners!"</p>
+    <strong>- Rajesh Kumar</strong>
+</div>
+<div class="testimonial">
+    <img src="images/testimonials/Ananya_Singh.jpg" alt="Ananya Singh" loading="lazy">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <p>"The lasagna is out of this world! Will definitely come back for more."</p>
+    <strong>- Ananya Singh</strong>
+</div>
+<div class="testimonial">
+    <img src="images/testimonials/Arjun_Patel.jpg" alt="Arjun Patel" loading="lazy">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <p>"Loved the cozy ambiance and the fusion menu. Highly recommend the tiramisu and espresso."</p>
+    <strong>- Arjun Patel</strong>
+</div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <button class="carousel-nav prev" onclick="moveTestimonials(-1)">❮</button>
+                <button class="carousel-nav next" onclick="moveTestimonials(1)">❯</button>
+                
+                <!-- Dots Navigation -->
+                <div class="carousel-dots" id="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservations Section -->
+    <section id="reservations" class="section">
+        <h2 class="section-title">Make a Reservation</h2>
+        <div class="reservation-content">
+            <form class="reservation-form" onsubmit="submitReservation(event)">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <select id="time" name="time" required>
+                        <option value="">Select Time</option>
+                        <option value="18:00">6:00 PM</option>
+                        <option value="18:30">6:30 PM</option>
+                        <option value="19:00">7:00 PM</option>
+                        <option value="19:30">7:30 PM</option>
+                        <option value="20:00">8:00 PM</option>
+                        <option value="20:30">8:30 PM</option>
+                        <option value="21:00">9:00 PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <select id="guests" name="guests" required>
+                        <option value="">Select Guests</option>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5">5 Guests</option>
+                        <option value="6">6 Guests</option>
+                        <option value="7">7+ Guests</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Special Requests</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Any special dietary requirements or requests..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Book Table</button>
+            </form>
+            <div class="contact-info" id="contact">
+                <h3>Contact Information</h3>
+                <div class="contact-item">
+                    <strong>📍 Address:</strong>
+                    <span>123 Food Street, Downtown, City 12345</span>
+                </div>
+                <div class="contact-item">
+                    <strong>📞 Phone:</strong>
+                    <span>(+91)123-456-7999</span>
+                </div>
+                <div class="contact-item">
+                    <strong>✉️ Email:</strong>
+                    <span>info@SpiceBasil.com</span>
+                </div>
+                <div class="contact-item">
+                    <strong>🕒 Hours:</strong>
+                    <span>Mon-Sun: 5:00 PM - 11:00 PM</span>
+                </div>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15201.986313417854!2d83.28535085260604!3d17.721226278406146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39430b59fdc655%3A0x656cb55e8c378403!2sVizag%20Food%20Street!5e0!3m2!1sen!2sus!4v1758911917995!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#reservations">Reservations</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p>&copy; 2024 Spice & Basil Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+</html>
