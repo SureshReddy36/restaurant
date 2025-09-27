@@ -6,7 +6,7 @@ const menuData = [
         category: "appetizers",
         price: 270,
         description: "Grilled bread topped with fresh tomatoes, garlic, basil and olive oil",
-        image: "images/Menu/Bruschetta_Classica.jpg",
+        image: "images/menu/Bruschetta_Classica.jpg",
         rating: 4.8
     },
     {
@@ -24,7 +24,7 @@ const menuData = [
         category: "appetizers",
         price: 350,
         description: "Crispy fried squid rings served with marinara sauce",
-        image: "images/Menu/Calamari_Fritti.jpg",
+        image: "images/menu/Calamari_Fritti.jpg",
         rating: 4.7
     },
     {
@@ -33,7 +33,7 @@ const menuData = [
         category: "main-course",
         price: 450,
         description: "Classic Roman pasta with eggs, cheese, pancetta and black pepper",
-        image: "images/Menu/Spaghetti_Carbonara.jpg",
+        image: "images/menu/Spaghetti_Carbonara.jpg",
         rating: 4.9
     },
     {
@@ -42,7 +42,7 @@ const menuData = [
         category: "main-course",
         price: 540,
         description: "Creamy arborio rice with porcini mushrooms and parmesan",
-        image: "images/Menu/Risotto_ai_Porcini.jpg",
+        image: "images/menu/Risotto_ai_Porcini.jpg",
         rating: 4.8
     },
     {
@@ -51,7 +51,7 @@ const menuData = [
         category: "main-course",
         price: 480,
         description: "Braised veal shanks with vegetables, white wine and herbs",
-        image: "images/Menu/Osso_Buco.jpg",
+        image: "images/menu/Osso_Buco.jpg",
         rating: 4.9
     },
     {
@@ -60,7 +60,7 @@ const menuData = [
         category: "main-course",
         price: 360,
         description: "Traditional pizza with tomato sauce, mozzarella and fresh basil",
-        image: "images/Menu/Pizza_Margherita.jpg",
+        image: "images/menu/Pizza_Margherita.jpg",
         rating: 4.7
     },
     {
@@ -69,7 +69,7 @@ const menuData = [
         category: "desserts",
         price: 180,
         description: "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone",
-        image: "images/Menu/Tiramisu.jpg",
+        image: "images/menu/Tiramisu.jpg",
         rating: 4.9
     },
     {
@@ -78,7 +78,7 @@ const menuData = [
         category: "desserts",
         price: 270,
         description: "Silky vanilla custard topped with berry compote",
-        image: "images/Menu/Panna_Cotta.jpg",
+        image: "images/menu/Panna_Cotta.jpg",
         rating: 4.8
     },
     {
@@ -87,7 +87,7 @@ const menuData = [
         category: "desserts",
         price: 90,
         description: "Three scoops of artisanal gelato - vanilla, chocolate, and pistachio",
-        image: "images/Menu/Gelato_Selection.jpg",
+        image: "images/menu/Gelato_Selection.jpg",
         rating: 4.7
     },
     {
@@ -96,7 +96,7 @@ const menuData = [
         category: "beverages",
         price: 450,
         description: "Premium bottle of Chianti Classico DOCG",
-        image: "images/Menu/Italian_Wine_Selection.jpg",
+        image: "images/menu/Italian_Wine_Selection.jpg",
         rating: 4.9
     },
     {
@@ -105,7 +105,7 @@ const menuData = [
         category: "beverages",
         price: 90,
         description: "Authentic Italian espresso made from premium beans",
-        image: "images/Menu/espresso.jpg",
+        image: "images/menu/espresso.jpg",
         rating: 4.8
     },
     {
@@ -114,7 +114,7 @@ const menuData = [
         category: "beverages",
         price: 45,
         description: "Traditional Italian lemon liqueur, served chilled",
-        image: "images/Menu/Limoncello.jpg",
+        image: "images/menu/Limoncello.jpg",
         rating: 4.7
     },
     {
@@ -123,7 +123,7 @@ const menuData = [
         category: "beverages",
         price: 90,
         description: "Refreshing cocktail with Aperol, prosecco and soda water",
-        image: "images/Menu/Aperol_Spritz.jpg",
+        image: "images/menu/Aperol_Spritz.jpg",
         rating: 4.6
     }
 ];
