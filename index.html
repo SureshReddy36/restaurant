@@ -1,254 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spice & Basil - Fine Italian Dining</title>
-    <link rel="icon" type="image/png" href="images/favicon.ico">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Suresh | Portfolio</title>
+    <meta name="description" content="Aspiring Full-Stack Developer & Data Enthusiast - Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container">
+        <nav class="nav">
+          <a class="nav__brand" href="#top">MALLIDI SAI SURESH REDDY</a>
+          <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+          <ul class="nav__links">
+            <li><a href="#hero" class="nav__link">Home</a></li>
+            <li><a href="#about" class="nav__link">About</a></li>
+            <li><a href="#skills" class="nav__link">Skills</a></li>
+            <li><a href="#projects" class="nav__link">Projects</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">Spice & Basil</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#reservations">Reservations</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div style="display: flex; align-items: center;">
-                <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
-                <button class="cart-icon" onclick="toggleCart()">
-                    🛒 Cart
-                    <span class="cart-count">0</span>
-                </button>
+    <main>
+      <!-- Hero / Landing -->
+      <section id="hero" class="section hero reveal">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Hi, I'm <span class="accent">Mallidi Sai Suresh Reddy</span>
+            </h1>
+            <p>"Hello! I’m Suresh Reddy, an IT graduate and aspiring full-stack developer with a strong foundation in programming and data management. I have experience with Java, Python, SQL Server, MySQL, and front-end development using HTML, CSS, and JavaScript. I also have skills in Excel for data analysis and visualization. I am passionate about developing efficient solutions, creating interactive web applications, and continuously improving my technical and problem-solving abilities."</p>
+            <p class="hero__tagline">
+              <span id="typewriter" class="typewriter" data-text="Aspiring Full-Stack Developer & Data Enthusiast." data-words="Aspiring Front-End Developer & Data Enthusiast.|Building Clean, Data-Driven Apps.|Java, Python, SQL & Web"></span>
+            </p>
+            <div class="hero__cta">
+              <a href="#projects" class="btn btn--primary">View Projects</a>
+              <a href="#contact" class="btn btn--ghost">Contact Me</a>
             </div>
-            <div class="nav-toggle" onclick="toggleNav()">
-                <span></span>
-                <span></span>
-                <span></span>
+          </div>
+          <div class="hero__art">
+            <div class="avatar ring">
+              <img src="images/MyProfile.jpg"alt="Profile" />
             </div>
+          </div>
         </div>
-    </nav>
+      </section>
 
-    <!-- Cart Sidebar -->
-    <div class="cart-overlay" onclick="toggleCart()"></div>
-    <div class="cart-sidebar">
-        <div class="cart-header">
-            <h2>Your Order</h2>
-            <button class="close-cart" onclick="toggleCart()">×</button>
+      <!-- About -->
+      <section id="about" class="section reveal">
+        <div class="container split">
+          <div>
+            <h2 class="section__title">About Me</h2>
+            <p class="muted">
+              I am passionate about building end‑to‑end solutions across the stack and turning data
+              into meaningful insights. I enjoy Java and Python for backends, SQL for data work,
+              and modern HTML/CSS/JavaScript for engaging UIs. I'm continuously learning and
+              experimenting with tools that help ship delightful, performant products.
+            </p>
+          </div>
+          <div class="about__highlights">
+            <div class="chip">Problem Solver</div>
+            <div class="chip">Clean Code</div>
+            <div class="chip">Team Player</div>
+            <div class="chip">Continuous Learner</div>
+          </div>
         </div>
-        <div class="cart-items"></div>
-        <div class="cart-total">
-            <h3>Total: $<span id="cart-total">0.00</span></h3>
-            <button class="checkout-btn" onclick="checkout()">Place Order</button>
-        </div>
-    </div>
+      </section>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Spice & Basil</h1>
-            <p>Authentic Italian Cuisine in the Heart of the City</p>
-            <a href="#menu" class="cta-button">View Our Menu</a>
+      <!-- Skills -->
+      <section id="skills" class="section reveal">
+        <div class="container">
+          <h2 class="section__title">Skills</h2>
+          <div class="skills">
+            <div class="skill" data-skill="Java" data-value="80" data-color="#f97316"></div>
+            <div class="skill" data-skill="MySQL" data-value="75" data-color="#06b6d4"></div>
+            <div class="skill" data-skill="SQL Server" data-value="70" data-color="#a855f7"></div>
+            <div class="skill" data-skill="Python" data-value="85" data-color="#22c55e"></div>
+            <div class="skill" data-skill="HTML" data-value="90" data-color="#ef4444"></div>
+            <div class="skill" data-skill="CSS" data-value="85" data-color="#3b82f6"></div>
+            <div class="skill" data-skill="JavaScript" data-value="80" data-color="#eab308"></div>
+            <div class="skill" data-skill="Excel" data-value="75" data-color="#10b981"></div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2 class="section-title">About Us</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <h3>Our Story</h3>
-                <p>Welcome to Spice & Basil, where authentic Italian flavors meet modern culinary artistry. Since 1985, we've been serving the finest Italian cuisine using traditional recipes passed down through generations.</p>
-                <p>Our head chef, Marco Rossi, brings over 20 years of experience from the kitchens of Rome and Milan. Every dish is crafted with passion, using only the freshest ingredients imported directly from Italy.</p>
-                <p>Whether you're joining us for an intimate dinner or a celebration with family and friends, Spice & Basil offers an unforgettable dining experience that captures the essence of Italy.</p>
+      <!-- Projects -->
+      <section id="projects" class="section reveal">
+        <div class="container">
+          <h2 class="section__title">Projects</h2>
+          <div class="projects">
+            <article class="card">
+              <div class="card__media" style="background-image:url('images/Projects/Library_Management_System.png');"></div>
+              <div class="card__body">
+                <h3 class="card__title">Library Mangement System</h3>
+                <p class="card__text">A responsive web-based system with Admin and User views, featuring dynamic book management, powerful search, order requests, smooth animations, and integration using HTML, CSS, JavaScript, SQL.</p>
+                <div class="card__actions">
+                  <a class="btn btn--ghost" href="https://github.com/sureshreddy36/library-management" target="_blank" rel="noreferrer">GitHub</a>
+                  <a class="btn btn--primary" href="https://librarymanagementm.netlify.app/" target="_blank" rel="noreferrer">Live</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__media" style="background-image:url('images/projects/Netflix_Clone.png');"></div>
+              <div class="card__body">
+                <h3 class="card__title">Netflix Clone</h3>
+                <p class="card__text">A responsive web application built with HTML, CSS, and JavaScript, offering dynamic movie listings, powerful search, interactive UI components, smooth animations, and a seamless streaming-like experience for users.</p>
+                <div class="card__actions">
+                  <a class="btn btn--ghost" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+                  <a class="btn btn--primary" href="#" target="_blank" rel="noreferrer">Live</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__media" style="background-image:url('images/Projects/restaurant.png');"></div>
+              <div class="card__body">
+                <h3 class="card__title">Spice & Basil - Italian restaurant</h3>
+                <p class="card__text">A responsive and modern webpage built with HTML, CSS, and JavaScript, featuring menu display, ambience highlights, online reservations, smooth animations, dynamic user interactions, and a seamless browsing experience.</p>
+                <div class="card__actions">
+                  <a class="btn btn--ghost" href="https://spiceandbasil.netlify.app/" target="_blank" rel="noreferrer">GitHub</a>
+                  <a class="btn btn--primary" href="https://spiceandbasil.netlify.app/" target="_blank" rel="noreferrer">Live</a>
+                </div>
+              </div>
+            </article>
+             <article class="card">
+              <div class="card__media" style="background-image:url('images/Projects/Frincy.png');"></div>
+              <div class="card__body">
+                <h3 class="card__title">Frincy - loan Management App</h3>
+                <p class="card__text">A responsive and modern webpage built with HTML, CSS, and JavaScript, featuring menu display, ambience highlights, online reservations, smooth animations, dynamic user interactions, and a seamless browsing experience.</p>
+                <div class="card__actions">
+                  <a class="btn btn--ghost" href="https://github.com/SureshReddy36/Frincy/" target="_blank" rel="noreferrer">GitHub</a>
+                  <a class="btn btn--primary" href="/" target="_blank" rel="noreferrer">Live</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section reveal">
+        <div class="container">
+          <h2 class="section__title">Contact</h2>
+          <form class="form" name="contact" netlify>
+            <input type="hidden" name="form-name" value="contact" />
+            <div class="form__row">
+              <div class="form__field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="form__field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
             </div>
-            <div class="about-image">
-                <img src="images/banner.jpg" alt="Chef Marco Rossi" loading="lazy">
+            <div class="form__field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
             </div>
-        </div>
-    </section>
-
-    <!-- Menu Section -->
-    <section id="menu" class="section">
-        <h2 class="section-title">Our Menu</h2>
-        <div class="menu-filters">
-            <button class="filter-btn active" onclick="filterMenu('all')">All</button>
-            <button class="filter-btn" onclick="filterMenu('appetizers')">Appetizers</button>
-            <button class="filter-btn" onclick="filterMenu('main-course')">Main Course</button>
-            <button class="filter-btn" onclick="filterMenu('desserts')">Desserts</button>
-            <button class="filter-btn" onclick="filterMenu('beverages')">Beverages</button>
-        </div>
-        <div class="menu-grid" id="menu-grid"></div>
-    </section>
-
-    <!-- Testimonials Carousel -->
-        <div class="section">
-            <h2 class="section-title">What Our Customers Say</h2>
-            <div class="testimonials-container">
-                <div class="testimonials-wrapper">
-                    <div class="testimonials-grid" id="testimonials-grid">
-                        <div class="testimonial">
-                            <img src="images/testimonials/Sarah_Johnson.jpg" alt="Sarah Johnson" loading="lazy">
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                            <p>"The best Italian food I've had outside of Italy! The pasta is absolutely divine and the service is impeccable."</p>
-                            <strong>- Sarah Johnson</strong>
-                        </div>
-                        <div class="testimonial">
-                            <img src="images/testimonials/Michael_Chen.jpg" alt="Michael Chen" loading="lazy">
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                            <p>"Spice & Basil never disappoints. The atmosphere is perfect for date nights and the tiramisu is to die for!"</p>
-                            <strong>- Michael Chen</strong>
-                        </div>
-                        <div class="testimonial">
-                            <img src="images/testimonials/Emma_Rodriguez.jpg" alt="Emma Rodriguez" loading="lazy">
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                            <p>"Outstanding food and wonderful staff. This place feels like a little piece of Italy right here in our city."</p>
-                            <strong>- Emma Rodriguez</strong>
-                        </div>
-                        <div class="testimonial">
-                            <img src="images/testimonials/David_Wilson.jpg" alt="David Wilson" loading="lazy">
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                            <p>"Amazing authentic Italian cuisine! The risotto is creamy perfection and the wine selection is excellent."</p>
-                            <strong>- David Wilson</strong>
-                        </div>
-                        <div class="testimonial">
-                            <img src="images/testimonials/Lisa_Brown.jpg" alt="Lisa Brown" loading="lazy">
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                            <p>"Romantic ambiance and incredible food. Perfect for special occasions. The osso buco was phenomenal!"</p>
-                            <strong>- Lisa Brown</strong>
-                        </div>
-                        <div class="testimonial">
-    <img src="images/testimonials/Sophia_Rao.jpg" alt="Sophia Rao" loading="lazy">
-    <div class="stars">⭐⭐⭐⭐⭐</div>
-    <p>"Authentic Italian flavors with an Indian twist! The pasta and pizza combo is heavenly."</p>
-    <strong>- Sophia Rao</strong>
-</div>
-<div class="testimonial">
-    <img src="images/testimonials/Rajesh_Kumar.jpg" alt="Rajesh Kumar" loading="lazy">
-    <div class="stars">⭐⭐⭐⭐⭐</div>
-    <p>"Excellent service and cozy interiors. A perfect spot for family dinners!"</p>
-    <strong>- Rajesh Kumar</strong>
-</div>
-<div class="testimonial">
-    <img src="images/testimonials/Ananya_Singh.jpg" alt="Ananya Singh" loading="lazy">
-    <div class="stars">⭐⭐⭐⭐⭐</div>
-    <p>"The lasagna is out of this world! Will definitely come back for more."</p>
-    <strong>- Ananya Singh</strong>
-</div>
-<div class="testimonial">
-    <img src="images/testimonials/Arjun_Patel.jpg" alt="Arjun Patel" loading="lazy">
-    <div class="stars">⭐⭐⭐⭐⭐</div>
-    <p>"Loved the cozy ambiance and the fusion menu. Highly recommend the tiramisu and espresso."</p>
-    <strong>- Arjun Patel</strong>
-</div>
-                    </div>
-                </div>
-                
-                <!-- Navigation Arrows -->
-                <button class="carousel-nav prev" onclick="moveTestimonials(-1)">❮</button>
-                <button class="carousel-nav next" onclick="moveTestimonials(1)">❯</button>
-                
-                <!-- Dots Navigation -->
-                <div class="carousel-dots" id="carousel-dots"></div>
+            <div class="form__actions">
+              <button type="submit" class="btn btn--primary">Send Message</button>
             </div>
-        </div>
-    </section>
+          </form>
 
-    <!-- Reservations Section -->
-    <section id="reservations" class="section">
-        <h2 class="section-title">Make a Reservation</h2>
-        <div class="reservation-content">
-            <form class="reservation-form" onsubmit="submitReservation(event)">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="date">Date</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <div class="form-group">
-                    <label for="time">Time</label>
-                    <select id="time" name="time" required>
-                        <option value="">Select Time</option>
-                        <option value="18:00">6:00 PM</option>
-                        <option value="18:30">6:30 PM</option>
-                        <option value="19:00">7:00 PM</option>
-                        <option value="19:30">7:30 PM</option>
-                        <option value="20:00">8:00 PM</option>
-                        <option value="20:30">8:30 PM</option>
-                        <option value="21:00">9:00 PM</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="guests">Number of Guests</label>
-                    <select id="guests" name="guests" required>
-                        <option value="">Select Guests</option>
-                        <option value="1">1 Guest</option>
-                        <option value="2">2 Guests</option>
-                        <option value="3">3 Guests</option>
-                        <option value="4">4 Guests</option>
-                        <option value="5">5 Guests</option>
-                        <option value="6">6 Guests</option>
-                        <option value="7">7+ Guests</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Special Requests</label>
-                    <textarea id="message" name="message" rows="3" placeholder="Any special dietary requirements or requests..."></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Book Table</button>
-            </form>
-            <div class="contact-info" id="contact">
-                <h3>Contact Information</h3>
-                <div class="contact-item">
-                    <strong>📍 Address:</strong>
-                    <span>123 Food Street, Downtown, City 12345</span>
-                </div>
-                <div class="contact-item">
-                    <strong>📞 Phone:</strong>
-                    <span>(+91)123-456-7999</span>
-                </div>
-                <div class="contact-item">
-                    <strong>✉️ Email:</strong>
-                    <span>info@SpiceBasil.com</span>
-                </div>
-                <div class="contact-item">
-                    <strong>🕒 Hours:</strong>
-                    <span>Mon-Sun: 5:00 PM - 11:00 PM</span>
-                </div>
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15201.986313417854!2d83.28535085260604!3d17.721226278406146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39430b59fdc655%3A0x656cb55e8c378403!2sVizag%20Food%20Street!5e0!3m2!1sen!2sus!4v1758911917995!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0" allowfullscreen loading="lazy"></iframe>
-            </div>
+          <div class="social">
+            <a href="https://www.linkedin.com/in/mallidi-sai-suresh-reddy/" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="social__link">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.82-2.2 3.75-2.2 4.01 0 4.75 2.64 4.75 6.08V24h-4v-7.2c0-1.72-.03-3.93-2.4-3.93-2.4 0-2.77 1.87-2.77 3.8V24h-4V8z"/></svg>
+            </a>
+            <a href="https://www.github.com/sureshreddy36" target="_blank" rel="noreferrer" aria-label="GitHub" class="social__link">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.77 5.46.77 11.73c0 4.93 3.19 9.11 7.62 10.59.56.1.77-.24.77-.55 0-.27-.01-1.17-.02-2.12-3.1.68-3.76-1.31-3.76-1.31-.51-1.29-1.25-1.63-1.25-1.63-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.17 1.72 1.17 1 .1.79-.76 1.55-1.16-2.47-.28-5.06-1.24-5.06-5.53 0-1.22.43-2.22 1.14-3-.11-.28-.5-1.42.11-2.95 0 0 .95-.3 3.11 1.15.9-.25 1.87-.37 2.83-.38.96.01 1.93.13 2.83.38 2.16-1.45 3.11-1.15 3.11-1.15.61 1.53.22 2.67.11 2.95.71.78 1.14 1.78 1.14 3 0 4.29-2.6 5.24-5.07 5.52.4.35.76 1.03.76 2.08 0 1.5-.01 2.71-.01 3.08 0 .31.21.66.78.55 4.43-1.48 7.62-5.66 7.62-10.59C23.23 5.46 18.27.5 12 .5z"/></svg>
+            </a>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#menu">Menu</a>
-                <a href="#reservations">Reservations</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <p>&copy; 2024 Spice & Basil Restaurant. All rights reserved.</p>
-        </div>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Suresh. All rights reserved.</p>
+      </div>
     </footer>
-    <script src="script/script.js"></script>
-</body>
-</html>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+
