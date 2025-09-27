@@ -15,7 +15,7 @@ const menuData = [
         category: "appetizers",
         price: 450,
         description: "Selection of cured meats, cheeses, olives and roasted vegetables",
-        image:"images/Menu/Antipasto_Misto.jpg",
+        image:"images/menu/Antipasto_Misto.jpg",
         rating: 4.9
     },
     {
