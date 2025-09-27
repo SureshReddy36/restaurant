@@ -6,7 +6,7 @@ const menuData = [
         category: "appetizers",
         price: 270,
         description: "Grilled bread topped with fresh tomatoes, garlic, basil and olive oil",
-        image: "images/menu/Bruschetta_Classica.jpg",
+        image: "images/Menu/Bruschetta_Classica.jpg",
         rating: 4.8
     },
     {
@@ -15,7 +15,7 @@ const menuData = [
         category: "appetizers",
         price: 450,
         description: "Selection of cured meats, cheeses, olives and roasted vegetables",
-        image:"images/menu/Antipasto_Misto.jpg",
+        image:"images/Menu/Antipasto_Misto.jpg",
         rating: 4.9
     },
     {
@@ -24,7 +24,7 @@ const menuData = [
         category: "appetizers",
         price: 350,
         description: "Crispy fried squid rings served with marinara sauce",
-        image: "images/menu/Calamari_Fritti.jpg",
+        image: "images/Menu/Calamari_Fritti.jpg",
         rating: 4.7
     },
     {
@@ -33,7 +33,7 @@ const menuData = [
         category: "main-course",
         price: 450,
         description: "Classic Roman pasta with eggs, cheese, pancetta and black pepper",
-        image: "images/menu/Spaghetti_Carbonara.jpg",
+        image: "images/Menu/Spaghetti_Carbonara.jpg",
         rating: 4.9
     },
     {
@@ -42,7 +42,7 @@ const menuData = [
         category: "main-course",
         price: 540,
         description: "Creamy arborio rice with porcini mushrooms and parmesan",
-        image: "images/menu/Risotto_ai_Porcini.jpg",
+        image: "images/Menu/Risotto_ai_Porcini.jpg",
         rating: 4.8
     },
     {
@@ -51,7 +51,7 @@ const menuData = [
         category: "main-course",
         price: 480,
         description: "Braised veal shanks with vegetables, white wine and herbs",
-        image: "images/menu/Osso_Buco.jpg",
+        image: "images/Menu/Osso_Buco.jpg",
         rating: 4.9
     },
     {
@@ -60,7 +60,7 @@ const menuData = [
         category: "main-course",
         price: 360,
         description: "Traditional pizza with tomato sauce, mozzarella and fresh basil",
-        image: "images/menu/Pizza_Margherita.jpg",
+        image: "images/Menu/Pizza_Margherita.jpg",
         rating: 4.7
     },
     {
@@ -69,7 +69,7 @@ const menuData = [
         category: "desserts",
         price: 180,
         description: "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone",
-        image: "images/menu/Tiramisu.jpg",
+        image: "images/Menu/Tiramisu.jpg",
         rating: 4.9
     },
     {
@@ -78,7 +78,7 @@ const menuData = [
         category: "desserts",
         price: 270,
         description: "Silky vanilla custard topped with berry compote",
-        image: "images/menu/Panna_Cotta.jpg",
+        image: "images/Menu/Panna_Cotta.jpg",
         rating: 4.8
     },
     {
@@ -87,7 +87,7 @@ const menuData = [
         category: "desserts",
         price: 90,
         description: "Three scoops of artisanal gelato - vanilla, chocolate, and pistachio",
-        image: "images/menu/Gelato_Selection.jpg",
+        image: "images/Menu/Gelato_Selection.jpg",
         rating: 4.7
     },
     {
@@ -96,7 +96,7 @@ const menuData = [
         category: "beverages",
         price: 450,
         description: "Premium bottle of Chianti Classico DOCG",
-        image: "images/menu/Italian_Wine_Selection.jpg",
+        image: "images/Menu/Italian_Wine_Selection.jpg",
         rating: 4.9
     },
     {
@@ -105,7 +105,7 @@ const menuData = [
         category: "beverages",
         price: 90,
         description: "Authentic Italian espresso made from premium beans",
-        image: "images/menu/espresso.jpg",
+        image: "images/Menu/espresso.jpg",
         rating: 4.8
     },
     {
@@ -114,7 +114,7 @@ const menuData = [
         category: "beverages",
         price: 45,
         description: "Traditional Italian lemon liqueur, served chilled",
-        image: "images/menu/Limoncello.jpg",
+        image: "images/Menu/Limoncello.jpg",
         rating: 4.7
     },
     {
@@ -123,7 +123,7 @@ const menuData = [
         category: "beverages",
         price: 90,
         description: "Refreshing cocktail with Aperol, prosecco and soda water",
-        image: "images/menu/Aperol_Spritz.jpg",
+        image: "images/Menu/Aperol_Spritz.jpg",
         rating: 4.6
     }
 ];
@@ -357,7 +357,7 @@ function renderMenu(items = menuData) {
                 <h3>${item.name}</h3>
                 <p>${item.description}</p>
                 <div class="menu-item-footer">
-                    <span class="price">$${item.price}</span>
+                    <span class="price">₹${item.price}</span>
                     <div class="rating">${'⭐'.repeat(Math.floor(item.rating))} ${item.rating}</div>
                 </div>
                 <div class="quantity-controls" style="display: none;">
@@ -438,7 +438,7 @@ function updateCartDisplay() {
         cartItem.innerHTML = `
             <div class="cart-item-info">
                 <h4>${item.name}</h4>
-                <p>$${item.price} x ${item.quantity}</p>
+                <p>₹${item.price} x ${item.quantity}</p>
                 <div class="quantity-controls">
                     <button class="quantity-btn" onclick="updateCartQuantity(${item.id}, ${item.quantity - 1})">-</button>
                     <span class="quantity">${item.quantity}</span>
@@ -446,7 +446,7 @@ function updateCartDisplay() {
                 </div>
             </div>
             <div>
-                <div>$${(item.price * item.quantity).toFixed(2)}</div>
+                <div>₹${(item.price * item.quantity).toFixed(2)}</div>
                 <button onclick="removeFromCart(${item.id})" style="color: var(--accent-color); background: none; border: none; cursor: pointer; margin-top: 0.5rem;">Remove</button>
             </div>
         `;
@@ -472,7 +472,7 @@ function checkout() {
         return;
     }
     
-    alert(`Thank you for your order! Total: $${cartTotal.toFixed(2)}\n\nYour order will be ready in 20-30 minutes.`);
+    alert(`Thank you for your order! Total: ₹${cartTotal.toFixed(2)}\n\nYour order will be ready in 20-30 minutes.`);
     cart = [];
     updateCartDisplay();
     toggleCart();
